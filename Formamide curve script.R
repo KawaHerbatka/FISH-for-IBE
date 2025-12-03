@@ -24,8 +24,8 @@ library(tidyverse)
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 #specifying parameters 
-  # filepath is the path to the file with SORTED and FILTERED oligos from OligoNdesign
-  # testfilePath should include a path to fasta file that contains sequence(s) with a gene from excluding/non-target set.
+  # filepath - the path to the file with SORTED and FILTERED oligos from OligoNdesign
+  # testfilePath - should include a path to fasta file that contains sequence(s) with a gene from excluding/non-target set.
   # Ran - end range of formamide concentration for drawing the formamide curve. Should be within range (0;100>
   # n,m - the range from n to m oligos for which to create the formamide curve. It might be advantageous to add the starting 
   # efficiency to the dataframe and sort by it, in order to choose best candidates

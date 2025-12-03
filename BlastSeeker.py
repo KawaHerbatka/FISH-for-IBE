@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 #This script takes blast results in, cuts out all under given percentage of identical positions and 
 #saves a .csv file with sequence id in DB, perc. of identity and sequence itself.
 #It was used for FISH porbe design with oligoNdesign to filter out target sequence from SILVA.

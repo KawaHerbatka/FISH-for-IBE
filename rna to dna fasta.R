@@ -1,7 +1,7 @@
 install.packages("baseq")
 library(baseq)
 
-file_path = "/media/sf_BioMachine_files/Euglenibacteraceae/anti-eugb/6th probe_mismatches.fasta"
-out = "/media/sf_BioMachine_files/Euglenibacteraceae/anti-eugb"
+file_path = "/path/to/rna/fast/file.fasta"
+out = "/path/to/output/FOLDER"
 # Write to custom directory
 write.rna_to_dna(file_path, output_dir = out)

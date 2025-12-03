@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
 
+#This script can be used to change .fasta file nucleotides from RNA to DNA
+#Used for FISH probe design with OligoNdesign tool
+
 import argparse
 
 parser = argparse.ArgumentParser(description="Replaces nucleotides characters, such as Us to Ts or ambiguities to Ns.")

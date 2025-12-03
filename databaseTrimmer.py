@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 #This script can be used to filter out sequences from a fasta file, based on another file, that contains
 #just the names of sequences to filter out. Output is a new fasta file without specified sequences
 #This script was made for use with oligoNdesign as part of filtering out target sequences from database.

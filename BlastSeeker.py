@@ -19,6 +19,8 @@ parser.add_argument('-b', action="store", required=True, dest='blast_out', help=
 
 parser.add_argument('-d', action="store", required=True, dest='db_file', help="database file as .fasta file")
 
+parser.add_argument('-i', action="store", required=False, dest='pr_id', default=90, help="a value from (0:100> that specifies minimum percent of identity to filter the results by")
+
 args = parser.parse_args()
 
 ############################################################################################################
@@ -28,7 +30,7 @@ data = {}
 
 with open(args.blast_out, 'r') as file:
     for line in file:
-        if float(line.split("\t")[2]) >= 90:
+        if float(line.split("\t")[2]) >= args.pr_id:
             if line.split("\t")[1] not in data:
                 data.update({line.split("\t")[1]:[line.split("\t")[2], ""]})
 

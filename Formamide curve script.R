@@ -57,7 +57,7 @@ test_df <- as.data.frame(seqinr::read.fasta(file = testfilePath, as.string = TRU
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #ADDING START EFFICIENCY TO THE TABLE
 
-probe <- df$sequence[]
+probe <- df$revCom[]
 targets <- reverseComplement(DNAStringSet(probe))
 
 f <- function(FA)
@@ -70,7 +70,7 @@ df$start_eff <- head(efficiency_all,-1)
 
 df = arrange(df, desc(df$start_eff))
 
-#Alternatively, sort by other parameters, whatever you prefer
+#Alternatively, sort by other parameters
 
 #df = arrange(df, df$class, desc(df$start_eff))
 
@@ -83,16 +83,16 @@ FA_range <- 0:Ran # [FA] (%, v/v)
 if(manyOffTarg){
   col = 1
   if (!isList){ 
-    probe <- df$sequence[n]
+    probe <- df$revCom[n]
   } else {
-    probe <- df$sequence[oligoList[1]]
+    probe <- df$revCom[oligoList[1]]
   }
 } else {
   if (!isList){ 
-    probe <- df$sequence[n:m]
+    probe <- df$revCom[n:m]
     col = m-n+1
   } else {
-    probe <- df$sequence[oligoList]
+    probe <- df$revCom[oligoList]
     col = length(oligoList)
   }
 }
@@ -144,8 +144,6 @@ legend("topright", legend=c("Targets", "Non-Targets", "50% Efficiency",
 
 # to check for hairpins and self-dimers - you can either use oligoNdesign command testThorough or refer to this website:
 # http://oligocalc.eu
-
-
 
 
 
